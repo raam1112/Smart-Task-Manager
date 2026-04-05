@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     const latestMessage = messages[messages.length - 1]?.content;
 
     // We can format history if needed for the SDK, but let's keep it simple for now
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
     
     // Create prompt structure with context
     const prompt = `You are a helpful AI assistant for the 'Smart Task Manager' web application.
