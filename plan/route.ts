@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ suggestion: "You have no tasks! Enjoy your free time or add some tasks to get started." });
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
     const prompt = `You are an expert productivity coach. Here is a list of the user's tasks right now:
 ${JSON.stringify(tasks, null, 2)}
